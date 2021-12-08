@@ -30,7 +30,7 @@ const useFireBase = () => {
 
   // register user
   const registerUser = (name, email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password, history)
       .then((userCredential) => {
         if (userCredential.user) {
           const user = userCredential.user;
