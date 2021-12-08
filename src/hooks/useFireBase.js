@@ -45,12 +45,15 @@ const useFireBase = () => {
           })
             .then((response) => {
               //assume response is 200
-              // if response is 200 then
-              // history.push("/admin")
+
+              // if(response.status === 1){
+              //   history.push("/admin")
+              // }
               console.log(response);
             })
-            .catch((error) => console.log(error))
-            .finally(() => history.push("/admin")); //assume response is 200 and redirected to admin page
+            .catch((error) => console.log(error));
+
+          history.push("/dummy"); //assume response is 200 and redirected to admin page
         }
       })
       .catch((error) => {});
@@ -73,15 +76,18 @@ const useFireBase = () => {
           })
             .then((response) => {
               //assume response is 200
-              // if response is 200 then
-              // history.push("/admin")
+
+              // if(response.status === 1){
+              //   history.push("/admin")
+              // }
               console.log(response);
             })
-            .catch((error) => console.log(error))
-            .finally(() => history.push("/admin")); //assume response is 200 and redirected to admin page
+            .catch((error) => console.log(error));
+
+          history.push("/dummy"); //assume response is 200 and redirected to admin page
         }
       })
-      .catch((error) => {});
+      .catch((error) => {}); //just redirected to dummy page
   };
 
   return { user, registerUser, loginUser };
